@@ -11,6 +11,23 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+#Eclipse files
+**/.project
+**/.classpath
+**/.settings/
+blog/bin/
+**/.tern-project
+
+#IntelliJ files
+**/*.iml
+**/.idea
+**/.gradle
+.idea
+*.iws
+*.iml
+*.ipr
+*/bin
+
 # Package Files #
 *.jar
 *.war
