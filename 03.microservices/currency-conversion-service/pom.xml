@@ -55,6 +55,8 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<!-- OPEN BUG with spring-cloud-starter-netflix-eureka-client It uses jackson-dataformat-xml.Hence, you would see XML responses instead of JSON responses in the browser.
+			If you want to see JSON responses, you can add an exclusion for jackson-dataformat-xml dependency. -->
 			<exclusions>
 				<exclusion>
 					<groupId>com.fasterxml.jackson.dataformat</groupId>
