@@ -14,20 +14,23 @@ public class ZuulLoggingFilter extends ZuulFilter{
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+
+	// since we want this filter to be excuted for all request we set shouldFilter to true;
 	@Override
 	public boolean shouldFilter() {
 		return true;
 	}
 
+	// here is where the real logic of the filtering happens. we want to log the details of the request
 	@Override
 	public Object run() {
 		HttpServletRequest request = 
-				RequestContext.getCurrentContext().getRequest();
+				RequestContext.getCurrentContext().getRequest();// this would give me the current request context
 		logger.info("request -> {} request uri -> {}", 
 				request, request.getRequestURI());
 		return null;
 	}
-
+// when shoudl the filtering happen before the request is sent or after or only filter error request.
 	@Override
 	public String filterType() {
 		return "pre";
