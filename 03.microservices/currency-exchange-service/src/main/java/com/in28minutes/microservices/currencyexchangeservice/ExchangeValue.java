@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class ExchangeValue {
+public class  ExchangeValue {
 	
 	@Id
 	private Long id;
